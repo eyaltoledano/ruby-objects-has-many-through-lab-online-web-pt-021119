@@ -29,6 +29,6 @@ class Doctor
     Appointment.all.select do |appointment|
       binding.pry
       appointment.patient if appointment.doctor == self)
-    end.uniq
+    end
   end
 end
