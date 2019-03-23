@@ -23,4 +23,6 @@ class Doctor
       @appointments << appointment if appointment.doctor == self
     end
   end
+
+  
 end
