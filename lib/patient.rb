@@ -27,7 +27,6 @@ class Patient
 
   def doctors
     Doctor.all.select do |doctor|
-      # binding.pry
       @doctors << doctor if doctor.patients.include?(self)
     end
   end
