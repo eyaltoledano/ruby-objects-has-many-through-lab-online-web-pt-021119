@@ -26,9 +26,9 @@ class Patient
   end
 
   def doctors
-    Appointment.all.select do |appointment|
+    Doctor.all.select do |doctor|
       binding.pry
-      @doctors << appointment.doctor if appointment.patient == self
+      @doctors << doctor if doctor.patients.include?(self)
     end
   end
 
