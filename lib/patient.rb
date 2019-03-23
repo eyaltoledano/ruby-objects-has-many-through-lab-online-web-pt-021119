@@ -1,5 +1,6 @@
 class Patient
-  attr_accessor :name, :doctor, :appointments
+  attr_writer :appointments
+  attr_accessor :name, :doctor,
 
   @@all = []
 
@@ -17,5 +18,7 @@ class Patient
     appointment = Appointment.new(self, doctor, date)
     binding.pry
   end
+
+
 
 end
