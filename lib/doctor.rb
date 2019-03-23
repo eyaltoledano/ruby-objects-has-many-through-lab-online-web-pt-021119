@@ -26,6 +26,8 @@ class Doctor
   end
 
   def patients
-    
+    Patient.all.select do |patient|
+      @patients << patient if patient.doctor == self
+    end
   end
 end
