@@ -27,6 +27,7 @@ class Patient
 
   def doctors
     Appointment.all.select do |appointment|
+      binding.pry
       @doctors << appointment.doctor if appointment.patient == self
     end
   end
