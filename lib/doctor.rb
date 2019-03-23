@@ -20,7 +20,7 @@ class Doctor
 
   def appointments
     Appointment.all.select do |appointment|
-      @appointments << appointment if appointment.doctor 
+      @appointments << appointment if appointment.doctor == self
     end
   end
 end
