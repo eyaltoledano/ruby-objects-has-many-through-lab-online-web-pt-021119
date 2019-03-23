@@ -1,4 +1,5 @@
 class Appointment
-  attr_accessor :
+  attr_writer :patient
+  attr_accessor :date
 
 end
