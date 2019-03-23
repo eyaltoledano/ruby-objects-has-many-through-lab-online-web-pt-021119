@@ -26,7 +26,7 @@ class Doctor
   end
 
   def patients
-    Appointment.all.collect { |appointment| binding.pry appointment.patient if appointment.doctor == self }.uniq
+    Appointment.all.collect { |appointment| binding.pry appointment.patient if appointment.doctor == self }
     end
   end
 end
