@@ -7,6 +7,6 @@ class Doctor
     @name = name
   end
 
-  
+
 
 end
