@@ -1,5 +1,5 @@
 class Patient
-  attr_writer :appointments
+  attr_writer :appointments, :doctors
   attr_accessor :name, :doctor
 
   @@all = []
@@ -7,6 +7,7 @@ class Patient
   def initialize(name)
     @name = name
     @appointments = []
+    @doctors = []
     @@all << self
   end
 
@@ -22,6 +23,10 @@ class Patient
     Appointment.all.select do |appointment|
       @appointments << appointment if appointment.patient == self
     end
+  end
+
+  def doctors
+    Doctor.all.collect {|doctor|}
   end
 
 end
