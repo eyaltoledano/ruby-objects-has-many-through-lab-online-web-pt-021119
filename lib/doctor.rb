@@ -26,6 +26,8 @@ class Doctor
   end
 
   def patients
-    Appointment.all.select {|appointment| appointment.patient if appointment.doctor == self}.uniq
+    Appointment.all.select do |appointment|
+      appointment.patient if appointment.doctor == self}.uniq
+    end
   end
 end
